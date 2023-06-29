@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escape the Room</title>
-
-  <link rel="stylesheet" href="index.css">
+  <title>Formulário de Charadas</title>
 </head>
 <body>
-  <div id="room">
-    <div id="question">
-      <p>Qual é o animal que anda com as patas traseiras e voa com as dianteiras?</p>
-      <input type="text" id="answer">
-      <p id="message"></p>
-    </div>
+  <h1>Charadas</h1>
+  <div id="charadaContainer">
+    <p id="charada"></p>
+    <label for="resposta">Resposta:</label>
+    <input type="text" id="resposta" required>
+
+    <button onclick="verificarResposta()">Verificar</button>
   </div>
 
-  <script src="index.js"></script>
+  <h2>Respostas:</h2>
+  <div id="respostas"></div>
 
+  <script src="index.js"></script>
 </body>
 </html>
