@@ -10,7 +10,7 @@ function gerarValoresEscondidos() {
 function exibirValorQuadrado(quadrado) {
     var square = document.getElementById("square" + quadrado);
     square.innerHTML = valoresEscondidos[quadrado - 1];
-    square.style.backgroundColor = "green";
+    square.style.backgroundColor = "blue";
     square.style.cursor = "default";
     square.onclick = null;
     quadradosClicados++;
