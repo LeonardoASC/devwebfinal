@@ -1,9 +1,9 @@
 var charadas = [
-  { pergunta: "Qual é o animal mais antigo do mundo?", resposta: "Tartaruga" },
-  { pergunta: "O que é que quanto maior menos se vê?", resposta: "Escuro" },
-  { pergunta: "O que é o que é, uma casinha branca com muitos bichinhos dentro?", resposta: "Fogão" },
-  { pergunta: "Qual é a palavra que os homens usam frequentemente mas as mulheres odeiam?", resposta: "Calma" },
-  { pergunta: "O que é que sempre se quebra ao ser falado?", resposta: "Silêncio" }
+  { pergunta: "Qual é o animal mais antigo do mundo?", resposta: "a" },
+  { pergunta: "O que é que quanto maior menos se vê?", resposta: "a" },
+  { pergunta: "O que é o que é, uma casinha branca com muitos bichinhos dentro?", resposta: "a" },
+  { pergunta: "Qual é a palavra que os homens usam frequentemente mas as mulheres odeiam?", resposta: "a" },
+  { pergunta: "O que é que sempre se quebra ao ser falado?", resposta: "a" }
 ];
 
 var charadaIndex = 0;
@@ -22,6 +22,10 @@ function verificarResposta() {
       exibirCharada();
     } else {
       mostrarRespostas();
+      setTimeout(function() {
+        window.location.href = "../parte4/index.html";
+        alert('Parabens voce passou!');
+      }, 5000); // Aguarda 200ms antes de exibir o alert
     }
   } else {
     alert("Resposta incorreta. Tente novamente!");
@@ -34,7 +38,7 @@ function exibirCharada() {
 
   charadaContainer.innerHTML = `
     <p id="charada">${charada}</p>
-    <label for="resposta">Resposta:</label>
+    <label for="resposta"></label>
     <input type="text" id="resposta" required>
   
     <button onclick="verificarResposta()">Verificar</button>
